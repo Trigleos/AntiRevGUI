@@ -1,1 +1,0 @@
-{"trace":"C snippet integrated into your source file that checks if the program is being traced i.e. debugged","breakpoint":"C snippet integrated into your source file that checks for breakpoints in the main function","time":"C snippet integrated into your source file that terminates the program after a certain amount of time to prevent debugging sessions"}
