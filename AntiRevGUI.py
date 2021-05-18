@@ -71,7 +71,7 @@ class Window:
 		else:
 			if self.trace_var.get() == "1" or self.breakpoint_var.get() == "1" or self.time_var.get() == "1":	#if a source level change has been selected
 				if ".c" not in self.filename:
-					print("Please provide C source file as input")
+					mb.showinfo(title="File selection",message="Please provide C source file as input")
 					return
 				else:
 					self.antianapy()
@@ -83,7 +83,7 @@ class Window:
 			elif self.nanomites_var.get() == "1" or self.elf_var.get() == "1":	#if elf level change has been selected
 				with open(self.filename,"rb") as f:
 					if f.read(4) != b"\x7fELF":
-						print("Please provide ELF file as input")
+						mb.showinfo(title="File selection",message="Please provide ELF file as input")
 					else:
 						self.elf_changes()
 						self.end()	
